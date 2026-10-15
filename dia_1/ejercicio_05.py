@@ -1,6 +1,5 @@
 from funciones_05 import get_number
 
-
 first_number, second_numer = get_number()
 
 if first_number > second_numer:

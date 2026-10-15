@@ -1,6 +1,6 @@
-#  Se usa para aplicar color a errores como WARNING al inicio del print y ENDC al final del print concatenado
 # colores son de https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal
 
+#  Se usa para aplicar color a errores como WARNING al inicio del print y ENDC al final del print concatenado
 
 HEADER = '\033[95m'
 OKBLUE = '\033[94m'
@@ -26,15 +26,23 @@ def get_number():
         try:
             first_number = int(input("Ingrese el primer numero "))
             second_number = int(input("Ingrese el segundo numero "))
+            return first_number , second_number
+        except ValueError:
+            print(WARNING + "Debes ingresar un número entero." + ENDC)
+
+
+
+def get_number_division():
+    while True:
+        try:
+            first_number = int(input("Ingrese el primer numero "))
+            second_number = int(input("Ingrese el segundo numero "))
             while True: 
                 if second_number == 0:
-                    print (f"La divisiones no se pueden realizar entre 0")
-                    print("Por favor ingresa otro numero")
-                    second_number = int(input("Ingrese el segundo numero "))
-                if second_number != 0:
-                    continue
-
-                return first_number , second_number
+                    print ("La divisiones no se pueden realizar entre 0 ")
+                    second_number = int(input("Por favor ingresa un numero diferente a 0:  "))
+                else:
+                    return first_number , second_number          
         except ValueError:
             print(WARNING + "Debes ingresar un número entero." + ENDC)
         

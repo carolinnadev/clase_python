@@ -23,7 +23,12 @@ def edad():
     while True:
         try:
             edad = int(input("Ingrese su edad:  "))
-            return edad
+            while True:
+                if edad < 0:
+                    print(WARNING + "En la edad no puedes ingresar numeros negativos" + ENDC)
+                    edad = int(input("Ingrese su edad:  "))
+                else: 
+                    return edad
         except ValueError:
             print(WARNING + "Error: Ingrese un numero valido" + ENDC)
 

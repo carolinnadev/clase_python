@@ -1,0 +1,23 @@
+
+HEADER = '\033[95m'
+OKBLUE = '\033[94m'
+OKCYAN = '\033[96m'
+OKGREEN = '\033[92m'
+WARNING = '\033[38;2;255;0;0m'
+FAIL = '\033[91m'
+ENDC = '\033[0m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+
+def edad():
+    while True:
+        try:
+            edad = int(input("Ingrese su edad:  "))
+            while True:
+                if edad < 0:
+                    print(WARNING + "En la edad no puedes ingresar numeros negativos" + ENDC)
+                    edad = int(input("Ingrese su edad:  "))
+                else: 
+                    return edad
+        except ValueError:
+            print(WARNING + "Error: Ingrese un numero valido" + ENDC)
