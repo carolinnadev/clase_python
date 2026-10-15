@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101018">
+  <title>Calculadora | Ejercicio 6</title>
+  <link rel="stylesheet" href="style_6.css">
+  <script src="scrip_6.js" defer></script>
+</head>
+<body>
+  <main class="calculator-shell">
+    <section class="calculator" aria-label="Calculadora científica">
+      <header class="calculator-header">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span class="brand-name">CALCULADORA <span>/ 06</span></span>
+        <span class="mode-indicator"><span></span> DEG</span>
+      </header>
+
+      <div class="display" aria-live="polite" aria-atomic="true">
+        <div class="display-expression" id="expression">Listo para calcular</div>
+        <output class="display-value" id="result">0</output>
+      </div>
+
+      <div class="keypad" aria-label="Teclado de la calculadora">
+        <button class="key key-clear" type="button" data-action="clear" aria-label="Borrar todo">AC</button>
+        <button class="key key-function" type="button" data-function="log" aria-label="Logaritmo base diez">log</button>
+        <button class="key key-function" type="button" data-function="sin" aria-label="Seno">sin</button>
+        <button class="key key-function" type="button" data-function="tan" aria-label="Tangente">tan</button>
+
+        <button class="key" type="button" data-number="7">7</button>
+        <button class="key" type="button" data-number="8">8</button>
+        <button class="key" type="button" data-number="9">9</button>
+        <button class="key key-operator" type="button" data-operator="/" aria-label="Dividir">÷</button>
+
+        <button class="key" type="button" data-number="4">4</button>
+        <button class="key" type="button" data-number="5">5</button>
+        <button class="key" type="button" data-number="6">6</button>
+        <button class="key key-operator" type="button" data-operator="*" aria-label="Multiplicar">×</button>
+
+        <button class="key" type="button" data-number="1">1</button>
+        <button class="key" type="button" data-number="2">2</button>
+        <button class="key" type="button" data-number="3">3</button>
+        <button class="key key-operator" type="button" data-operator="-" aria-label="Restar">−</button>
+
+        <button class="key" type="button" data-number="0">0</button>
+        <button class="key" type="button" data-action="decimal" aria-label="Punto decimal">.</button>
+        <button class="key key-function" type="button" data-operator="^" aria-label="Potencia">xʸ</button>
+        <button class="key key-operator" type="button" data-operator="+" aria-label="Sumar">+</button>
+
+        <button class="key key-function" type="button" data-function="sqrt" aria-label="Raíz cuadrada">√x</button>
+        <button class="key key-function" type="button" data-function="cbrt" aria-label="Raíz cúbica">∛x</button>
+        <button class="key key-function" type="button" data-action="percent" aria-label="Porcentaje">%</button>
+        <button class="key key-equals" type="button" data-action="equals" aria-label="Calcular resultado">=</button>
+      </div>
+
+      <footer class="calculator-footer">
+        <span>CIENTÍFICA</span>
+        <span class="footer-dot" aria-hidden="true"></span>
+        <span>LISTA</span>
+      </footer>
+    </section>
+    <p class="page-note">Precisión en cada operación.</p>
+  </main>
+</body>
+</html>

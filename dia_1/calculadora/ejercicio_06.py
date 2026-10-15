@@ -1,5 +1,5 @@
 # importo las funciones que voy a usar
-from funciones_06 import get_option, get_number, get_numbers, get_number_division, get_number_potencia, get_number_raiz_cuadrada, suma, resta, multiplicacion, division, potencia, raiz_cuadrada, raiz_cubica
+from dia_1.calculadora.funciones_06 import get_option, get_number, get_numbers, get_number_division, get_number_potencia, get_number_raiz_cuadrada, suma, resta, multiplicacion, division, potencia, raiz_cuadrada, raiz_cubica
 
 #aplico el color que quiero usar en los errores
 HEADER = '\033[38;2;0;200;255m'
