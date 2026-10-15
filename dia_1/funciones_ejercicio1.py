@@ -1,0 +1,52 @@
+#  Se usa para aplicar color a errores como WARNING al inicio del print y ENDC al final del print concatenado
+# colores son de https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal
+
+
+HEADER = '\033[95m'
+OKBLUE = '\033[94m'
+OKCYAN = '\033[96m'
+OKGREEN = '\033[92m'
+WARNING = '\033[38;2;255;0;0m'
+FAIL = '\033[91m'
+ENDC = '\033[0m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+
+def get_option():
+    while True:
+        try:
+            opcion = int(input("Ingresa la opcion elegida "))
+            return opcion
+        except ValueError:
+            print(WARNING + "Ingresa una opcion valida, debes ingresar una de las opciones anteriores" + ENDC)
+
+
+def get_number():
+    while True:
+        try:
+            first_number = int(input("Ingrese el primer numero "))
+            second_number = int(input("Ingrese el segundo numero "))
+            while True: 
+                if second_number == 0:
+                    print (f"La divisiones no se pueden realizar entre 0")
+                    print("Por favor ingresa otro numero")
+                    second_number = int(input("Ingrese el segundo numero "))
+                if second_number != 0:
+                    continue
+
+                return first_number , second_number
+        except ValueError:
+            print(WARNING + "Debes ingresar un número entero." + ENDC)
+        
+
+def suma (a,b):
+    return (a+b)
+
+def resta (a,b):
+    return (a-b)
+
+def multiplicacion (a,b):
+    return (a*b)
+
+def division (a,b):
+        return (a/b)
