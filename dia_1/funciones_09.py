@@ -16,8 +16,8 @@ def get_price():
             while True: 
                 if price < 0:
                     print (WARNING + "El valor de la compra no puede ser negativo" + ENDC)
-                    calificacion = int(input("Por favor ingresa un valor valido:  "))
+                    price = float(input("Por favor ingresa un valor valido:  "))
                 else:
                     return price
         except ValueError:
-            print(WARNING + "Debes ingresar un número entero." + ENDC)
+            print(WARNING + "Debes ingresar un valor valido" + ENDC)
